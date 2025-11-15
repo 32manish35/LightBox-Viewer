@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lightbox Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Landscape Gallery</h1>
+
+  <!-- 1) gallery container with 3 thumbnails -->
+  <div class="gallery">
+    <img class="gallery-item"
+         src="https://cdn.freecodecamp.org/curriculum/labs/stonehenge-thumbnail.jpg"
+         alt="Stonehenge thumbnail">
+    <img class="gallery-item"
+         src="https://cdn.freecodecamp.org/curriculum/labs/storm-thumbnail.jpg"
+         alt="Storm thumbnail">
+    <img class="gallery-item"
+         src="https://cdn.freecodecamp.org/curriculum/labs/trees-thumbnail.jpg"
+         alt="Trees thumbnail">
+  </div>
+
+  <!-- 2) lightbox (hidden initially) -->
+  <div class="lightbox" role="dialog" aria-hidden="true">
+    <button id="close-btn" aria-label="Close">&times;</button>
+    <img id="lightbox-image" alt="Full size preview" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
