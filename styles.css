@@ -1,0 +1,71 @@
+
+/* reset a little */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  padding: 24px;
+  background: #f6f7fb;
+  color: #111;
+}
+
+/* gallery */
+.gallery {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 16px;
+}
+
+.gallery-item {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* lightbox - hidden initially (display: none) */
+.lightbox {
+  display: none;                /* hidden initially - test requires this */
+  position: fixed;              /* fixed positioning */
+  top: 0;                       /* start at top-left corner */
+  left: 0;
+  width: 100%;                  /* cover entire viewport */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);  /* background color */
+  justify-content: center;      /* center children when visible */
+  align-items: center;
+  z-index: 1000;
+  gap: 16px;
+  padding: 24px;
+}
+
+/* close button */
+#close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 36px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* full-size image styling */
+#lightbox-image {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
